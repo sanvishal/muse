@@ -1,0 +1,13 @@
+$bg-color: #202344;
+$fg-color: #272c4c;
+$cont-color: #353965;
+$text-color: #ffffff;
+$accent-color: #e553d2;
+$accent-gradiant: linear-gradient(270deg, #e553d2 0%, #6266f6 100%);
+$logo-font: "Audiowide", "Consolas";
+$primary-font: "Montserrat", "Consolas";
+
+@mixin fullwh {
+  width: 100%;
+  height: 100%;
+}

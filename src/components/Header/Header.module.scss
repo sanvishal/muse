@@ -1,0 +1,129 @@
+@import "../../globals.scss";
+.headerCont {
+  height: 75px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+
+  .headerContent {
+    width: 100%;
+    justify-content: space-between;
+
+    .left {
+      font-size: 38px;
+      font-family: $logo-font;
+      color: $text-color;
+      .logo {
+        margin-right: 16px;
+        svg {
+          width: 33px;
+          height: 39px;
+        }
+      }
+    }
+    .right {
+      gap: 15px;
+      .profile {
+        cursor: pointer;
+        background-color: $cont-color;
+        border-radius: 44px;
+        width: 225px;
+        justify-content: space-between;
+        box-shadow: 0px 8px 10px -10px rgba(0, 0, 0, 0.25);
+        .profLeft {
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 26px;
+          letter-spacing: -0.02em;
+          color: $text-color;
+          .profilePic {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin-right: 7px;
+            margin-left: 5px;
+          }
+        }
+        .profRight {
+          margin-right: 10px;
+          svg {
+            width: 14px;
+            color: $text-color;
+          }
+        }
+      }
+      .volumeRocker {
+        width: 260px;
+        height: 60px;
+        background-color: $cont-color;
+        border-radius: 44px;
+        box-shadow: 0px 8px 10px -10px rgba(0, 0, 0, 0.25);
+        svg {
+          color: $text-color;
+          width: 25px;
+          height: 21px;
+          margin-right: 3px;
+          cursor: pointer;
+        }
+        input[type="range"] {
+          width: 175px;
+          height: 4px;
+          -webkit-appearance: none;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+          border-radius: 100px;
+          background: linear-gradient(90.93deg, #6266f6 4.32%, #d17abf 109.79%);
+          transition: all 0.1s ease-in-out;
+
+          &:disabled {
+            opacity: 0.5;
+            cursor: unset;
+          }
+
+          &::-webkit-slider-runnable-track {
+            background: linear-gradient(90.93deg, #6266f6 4.32%, #d17abf 109.79%);
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 4px;
+            width: 4px;
+            background: transparent;
+            box-shadow: calc(100vw + 4px) 0 0 100vw #202344;
+            border-radius: 50%;
+          }
+
+          &::-moz-range-track {
+            background: linear-gradient(90.93deg, #6266f6 4.32%, #d17abf 109.79%);
+          }
+
+          &::-moz-range-thumb {
+            height: 4px;
+            width: 4px;
+            background: transparent;
+            border: none;
+            border-radius: 50%;
+            box-shadow: calc(100vw + 4px) 0 0 100vw #202344;
+            box-sizing: border-box;
+          }
+        }
+
+        &:hover {
+          input[type="range"] {
+            height: 10px;
+            &::-webkit-slider-thumb {
+              height: 10px;
+              width: 10px;
+            }
+            &::-moz-range-thumb {
+              height: 10px;
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
