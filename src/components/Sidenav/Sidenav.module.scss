@@ -1,0 +1,74 @@
+@import "../../globals.scss";
+.navCont {
+  position: absolute;
+  height: 100%;
+  width: $sidenav-width;
+
+  .navContent {
+    height: 100%;
+    width: 100%;
+
+    .navItem {
+      color: $text-color;
+      height: 65px;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      margin-left: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: all 0.12s ease-in-out;
+      svg {
+        width: 25px;
+        height: 25px;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.navBg {
+  margin-left: 20px;
+  position: absolute;
+  height: 65px;
+  background: $accent-gradiant;
+  width: calc(100% - 20px);
+  border-radius: 21px;
+  z-index: 1;
+  top: 0px;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.subscribe {
+  position: absolute;
+  bottom: 16px;
+  height: 65px;
+  margin-left: 20px;
+  width: calc(100% - 20px);
+  border-radius: 21px;
+  background: $accent-gradiant;
+
+  .content {
+    margin: 5px 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background: $bg-color;
+    border-radius: 16px;
+    gap: 16px;
+    font-size: 18px;
+    span {
+      font-weight: bold;
+      background: -webkit-linear-gradient(270deg, #e553d2 0%, #6266f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
