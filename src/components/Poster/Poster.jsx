@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Poster.module.scss";
-import PosterImage from "../../assets/poster.jpeg";
 import classNames from "classnames";
 
 const Poster = () => {

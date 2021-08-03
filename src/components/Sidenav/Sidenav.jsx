@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Sidenav.module.scss";
-import { FaHome, FaSearch, FaHeart, FaCheckSquare } from "react-icons/fa";
+import { FaHome, FaSearch, FaHeart } from "react-icons/fa";
 import { ReactComponent as LibraryIcon } from "../../assets/library.svg";
 import { ReactComponent as CheckIcon } from "../../assets/checkIcon.svg";
 import classNames from "classnames";

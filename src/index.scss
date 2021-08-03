@@ -46,3 +46,22 @@ main {
   width: calc(100% - 300px);
   height: 100%;
 }
+
+::-webkit-scrollbar {
+  height: 6px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: lighten($color: #353965, $amount: 7);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $cont-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($color: #353965, $amount: 10);
+}

@@ -1,7 +1,6 @@
 import Header from "./components/Header/Header";
 import Sidenav from "./components/Sidenav/Sidenav";
-import BodyContent from "./views/BodyContent";
-import logo from "./logo.svg";
+import BodyContent from "./views/BodyContent/BodyContent";
 
 function App() {
   return (
