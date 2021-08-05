@@ -1,7 +1,7 @@
 @import "../../globals.scss";
 .headerCont {
   height: 75px;
-  margin-top: 30px;
+  margin-top: 12px;
   margin-left: 20px;
   margin-right: 20px;
   overflow: hidden;
@@ -83,7 +83,11 @@
           }
 
           &::-webkit-slider-runnable-track {
-            background: linear-gradient(90.93deg, #6266f6 4.32%, #d17abf 109.79%);
+            background: linear-gradient(
+              90.93deg,
+              #6266f6 4.32%,
+              #d17abf 109.79%
+            );
           }
 
           &::-webkit-slider-thumb {
@@ -96,7 +100,11 @@
           }
 
           &::-moz-range-track {
-            background: linear-gradient(90.93deg, #6266f6 4.32%, #d17abf 109.79%);
+            background: linear-gradient(
+              90.93deg,
+              #6266f6 4.32%,
+              #d17abf 109.79%
+            );
           }
 
           &::-moz-range-thumb {

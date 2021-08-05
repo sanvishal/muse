@@ -2,6 +2,7 @@
 .posterCont {
   padding: 20px;
   position: relative;
+  flex: 1;
 
   .posterContent {
     border-radius: 21px;
@@ -13,7 +14,7 @@
       url("../../assets/poster.jpeg") center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: calc(165px - 20px);
+    height: calc(100% - 40px);
     box-shadow: 0px 34px 34px -27px rgba(6, 6, 26, 0.41);
     justify-content: space-between;
     padding: 20px 20px;

@@ -3,22 +3,22 @@ import styles from "./ArtistCard.module.scss";
 import classNames from "classnames";
 import { FaHeadphones, FaHeart } from "react-icons/fa";
 
-const ArtistCard = () => {
+const ArtistCard = ({ name, src, minutes, liked }) => {
   return (
     <div className={styles.artistCardCont}>
       <div className={classNames(styles.artistCardContent, "flex", "ac")}>
         <div className={styles.left}>
-          <img src="/albumCovers/1.jpg" alt="artist" />
+          <div style={{ backgroundImage: `url(/artists/${src})` }} />
         </div>
         <div className={classNames(styles.right, "flex")}>
-          <div className={styles.name}>Taylor Swift</div>
+          <div className={styles.name}>{name}</div>
           <div className={classNames(styles.playMinutes, "flex", "ac")}>
             <FaHeadphones />
-            12 dfgk lfkg
+            {minutes.toLocaleString()} play minutes
           </div>
           <div className={classNames(styles.likedSongs, "flex", "ac")}>
             <FaHeart />
-            12 dfgk lfkg
+            {liked.toLocaleString()} liked songs
           </div>
         </div>
       </div>

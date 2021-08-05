@@ -1,4 +1,5 @@
 import React from "react";
+import Player from "../../components/Player/Player";
 import Poster from "../../components/Poster/Poster";
 import Artists from "../Artists/Artists";
 import Recents from "../Recents/Recents";
@@ -11,6 +12,7 @@ const BodyContent = () => {
         <Poster />
         <Recents />
         <Artists />
+        <Player />
       </div>
     </div>
   );
