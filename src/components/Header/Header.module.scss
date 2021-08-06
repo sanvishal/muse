@@ -135,3 +135,40 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .headerCont {
+    .headerContent {
+      .left {
+        font-size: 24px;
+        .logo {
+          margin-right: 4px;
+          svg {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+      .right {
+        .volumeRocker {
+          display: none;
+        }
+        .profile {
+          width: 200px;
+          .profLeft {
+            font-size: 18px;
+            .profilePic {
+              margin-top: 4px;
+              margin-bottom: 4px;
+              width: 40px;
+              height: 40px;
+            }
+            .profRight {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

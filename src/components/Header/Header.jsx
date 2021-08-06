@@ -1,10 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import classNames from "classnames";
-import { BsFillVolumeUpFill, BsFillVolumeDownFill, BsFillVolumeMuteFill } from "react-icons/bs";
+import {
+  BsFillVolumeUpFill,
+  BsFillVolumeDownFill,
+  BsFillVolumeMuteFill,
+} from "react-icons/bs";
 import { IoCaretDownOutline } from "react-icons/io5";
-import ProfilePic from '../../assets/profile.jpg';
+import ProfilePic from "../../assets/profile.jpg";
 
 const Header = () => {
   const [isMuted, setIsMuted] = useState(false);
@@ -16,42 +20,51 @@ const Header = () => {
   );
 
   const renderVolumeIcon = () => {
-    if(isMuted) {
-      return <BsFillVolumeMuteFill onClick={(e => setIsMuted(!isMuted))}/>
+    if (isMuted) {
+      return <BsFillVolumeMuteFill onClick={(e) => setIsMuted(!isMuted)} />;
     } else {
-      if(volumeLevel <= 40 && volumeLevel > 0) {
-        return <BsFillVolumeDownFill onClick={(e => setIsMuted(!isMuted))}/>
-      } else if(volumeLevel >= 40 && volumeLevel <= 100) {
-        return <BsFillVolumeUpFill onClick={(e => setIsMuted(!isMuted))}/>
+      if (volumeLevel <= 40 && volumeLevel > 0) {
+        return <BsFillVolumeDownFill onClick={(e) => setIsMuted(!isMuted)} />;
+      } else if (volumeLevel >= 40 && volumeLevel <= 100) {
+        return <BsFillVolumeUpFill onClick={(e) => setIsMuted(!isMuted)} />;
       } else {
-        return <BsFillVolumeMuteFill onClick={(e => setIsMuted(!isMuted))}/>
+        return <BsFillVolumeMuteFill onClick={(e) => setIsMuted(!isMuted)} />;
       }
     }
-  }
+  };
 
   return (
     <header className={styles.headerCont}>
-      <div className={classNames(styles.headerContent, "flex", 'ac')}>
-        <div className={classNames(styles.left, 'flex')}>
+      <div className={classNames(styles.headerContent, "flex", "ac")}>
+        <div className={classNames(styles.left, "flex")}>
           <div className={styles.logo}>
             <Logo />
           </div>
           Muse
         </div>
-        <div className = {classNames(styles.right, 'flex')}>
-          <div className = {classNames(styles.volumeRocker, 'flex', 'ac', 'jc')}>
+        <div className={classNames(styles.right, "flex")}>
+          <div className={classNames(styles.volumeRocker, "flex", "ac", "jc")}>
             {renderVolumeIcon()}
-            <Slider isMuted={isMuted}/>
+            <Slider isMuted={isMuted} />
           </div>
-          <div className = {classNames(styles.profile, 'flex ac')}>
-            <div className = {classNames(styles.profLeft, 'flex ac jc')}>
-              <img src = {ProfilePic} className = {styles.profilePic}/>
+          <a
+            className={classNames(styles.profile, "flex ac")}
+            href="https://tkvishal.now.sh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={classNames(styles.profLeft, "flex ac jc")}>
+              <img
+                src={ProfilePic}
+                className={styles.profilePic}
+                alt="profilepic"
+              />
               Vishal TK
             </div>
-            <div className = {classNames(styles.profRight, 'flex ac jc')}>
+            <div className={classNames(styles.profRight, "flex ac jc")}>
               <IoCaretDownOutline />
             </div>
-        </div>
+          </a>
         </div>
       </div>
     </header>
@@ -60,21 +73,23 @@ const Header = () => {
 
 const useSlider = (min, max, defaultState, className) => {
   const [state, setSlide] = useState(defaultState);
-  const handleChange = e => {
+  const handleChange = (e) => {
     setSlide(e.target.value);
   };
 
-  const Slider = ({isMuted}) => {
-    return (<input
-      type="range"
-      className={className}
-      min={min}
-      max={max}
-      step={1}
-      defaultValue={state}
-      onMouseUp={handleChange}
-      disabled={isMuted}
-    />)
+  const Slider = ({ isMuted }) => {
+    return (
+      <input
+        type="range"
+        className={className}
+        min={min}
+        max={max}
+        step={1}
+        defaultValue={state}
+        onMouseUp={handleChange}
+        disabled={isMuted}
+      />
+    );
   };
   return [state, Slider, setSlide];
 };
