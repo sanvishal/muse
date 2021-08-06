@@ -11,12 +11,12 @@ const Player = () => {
       <div className={classNames(styles.playerContent, "flex ac")}>
         <div className={classNames(styles.leftCont, "flex ac")}>
           <div className={classNames(styles.leftPic)}>
-            <img src="/artists/tay.jpeg" alt="tay" />
+            <img src="/albumCovers/2.png" alt="wknd" />
           </div>
           <div className={classNames(styles.rightSong, "flex ac")}>
             <div className={classNames(styles.top, "flex ac")}>
               <div className={classNames(styles.songNameLeft, "flex ac")}>
-                Enchanted
+                Blinding Lights
                 <FaHeart />
               </div>
               <div className={classNames(styles.songOptionsRight, "flex ac")}>
