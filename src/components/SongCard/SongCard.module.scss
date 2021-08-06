@@ -1,6 +1,7 @@
 .songCardCont {
   margin-right: 22px;
   margin-bottom: 14px;
+  cursor: pointer;
 
   .songCardContent {
     width: 190px;
@@ -71,6 +72,10 @@
         }
         .right {
           cursor: pointer;
+          transition: transform 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }

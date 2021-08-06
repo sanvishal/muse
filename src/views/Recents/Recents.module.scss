@@ -1,6 +1,7 @@
 @import "../../globals.scss";
 .recentsCont {
   padding: 0 20px;
+  overflow-y: hidden;
   .topBar {
     justify-content: space-between;
     .title {
@@ -20,6 +21,7 @@
 
 .songsCarousel {
   overflow-x: auto;
+  overflow-y: hidden;
   margin: 14px 0;
 }
 
