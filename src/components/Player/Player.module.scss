@@ -252,5 +252,14 @@
   .controlsCont {
     top: 5px;
     right: 10px;
+    svg {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
   }
 }
